@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+.list {
+  font-family: "Playfair Display";
+  padding: 10px;
+  text-align: center;
+}
+
+.item {
+  display: inline;
+  margin-right: 20px;
+  font-size: 28px;
+}
+
+li:hover {
+  background-color: rgb(235, 199, 41);
+}
