@@ -1,0 +1,4 @@
+
+#myid:focus               0.1.1.0
+.menu > li > a:hover      0.0.2.2
+#myid > ul > li a:hover   0.1.1.3
