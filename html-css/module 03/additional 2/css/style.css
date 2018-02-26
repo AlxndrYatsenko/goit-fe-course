@@ -1,20 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
-* {
-  margin: 0;
-}
-
-body {
-  background-color: rgb(241, 239, 208);
-}
 .wrapper {
-  font-family: Playfair Display;
-  background-color: white;
-  box-sizing: border-box;
   height: 550px;
   width: 470px;
   padding: 35px 25px 35px 25px;
-  border-color: black;
+  margin: auto;
+  color: rgb(99, 99, 99);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  border-radius: 2px;  
+  font-family: Playfair Display;
+  box-sizing: border-box;
 }
 
 h2 {
