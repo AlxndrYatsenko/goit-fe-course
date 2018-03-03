@@ -82,4 +82,8 @@ button{
   font-size: 20px;
   line-height: 24px;
   border: solid rgb(98, 98, 98) 1px;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.1);
 }
