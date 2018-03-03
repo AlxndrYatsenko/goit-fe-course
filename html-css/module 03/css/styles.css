@@ -1,0 +1,85 @@
+body {
+  font-family: 'Playfair Display', serif;
+  color: rgb(98, 98, 98);
+  line-height: 24px;
+  font-size: 14px;
+  margin-top: 75px;
+}
+
+.menu-list {
+  width: 585px;
+  margin: auto;
+  padding: 0;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-item:nth-of-type(1){
+  margin-right: 120px;
+}
+.menu-item:nth-of-type(2){
+  margin-right: 105px;
+}
+.menu-item:nth-of-type(3){
+  margin-right: 95px;
+}
+
+.menu-link {
+  color: rgb(98, 98, 98);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.menu-link:hover{
+  color: rgb(23, 206, 45);
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 970px;
+  margin: auto;
+  text-align: left;
+}
+
+.articles-list {
+  margin: 0;
+  padding: 0;
+}
+
+.articles-item {
+  display: inline-block;
+  width: 420px;
+  height: 480px;
+  margin: 100px 30px 35px 30px;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Ubuntu:300, Arial, Helvetica", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: rgb(194, 194, 186);
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: lighter;
+}
+
+button{
+  display: block;
+  width: 165px;
+  height: 60px;
+  color:  rgb(98, 98, 98);
+  background-color: white;
+  margin: auto;
+  margin-bottom: 70px;
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 24px;
+  border: solid rgb(98, 98, 98) 1px;
+}
