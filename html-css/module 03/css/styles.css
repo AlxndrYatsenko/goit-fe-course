@@ -58,7 +58,7 @@ a.menu-link:hover{
 .title {
   font-size: 14px;
   line-height: 17px;
-  font-family: "Ubuntu:300, Arial, Helvetica", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
   color: rgb(194, 194, 186);
