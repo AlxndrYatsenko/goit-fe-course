@@ -56,24 +56,24 @@ a.menu-link:hover {
   padding: 0;
 }
 .articles-item:nth-of-type(even) {
-  margin-right: 0px;
+  padding-right: 0px;
 }
 .articles-item:nth-last-of-type(-n + 2) {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 .articles-item {
   display: inline-block;
   vertical-align: top;
   width: 420px;
   height: 480px;
-  margin-bottom: 130px;
-  margin-right: 60px;
+  padding-bottom: 130px;
+  padding-right: 60px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .articles-item img {
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .title {
@@ -84,7 +84,7 @@ a.menu-link:hover {
   text-transform: uppercase;
   color: rgb(194, 194, 186);
   margin: 0 auto;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   width: 100%;
 }
 
@@ -93,7 +93,7 @@ h2 {
   line-height: 38px;
   font-weight: lighter;
   margin: 0 auto;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: 100%;
 }
 
@@ -111,11 +111,14 @@ button {
   color: rgb(98, 98, 98);
   background-color: white;
   margin: 0 auto;
-  margin-bottom: 70px;
   font-size: 20px;
   line-height: 24px;
   border: solid rgb(98, 98, 98) 1px;
   cursor: pointer;
+}
+
+.load-more{
+  margin-bottom: 70px;
 }
 
 button:hover {
