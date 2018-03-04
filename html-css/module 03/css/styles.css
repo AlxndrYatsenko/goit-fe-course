@@ -118,7 +118,8 @@ button {
 }
 
 .load-more{
-  margin-bottom: 70px;
+  padding-bottom: 70px;
+  border: solid 1px transparent;
 }
 
 button:hover {
