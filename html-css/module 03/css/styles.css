@@ -46,9 +46,11 @@ a.menu-link:hover {
 
 .articles-item {
   display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
   width: 420px;
   height: 480px;
-  padding: 100px 30px 35px 30px; 
+  margin: 100px 30px 60px 30px; 
 }
 
 .title {
@@ -73,7 +75,6 @@ button {
   color: rgb(98, 98, 98);
   background-color: white;
   margin: auto;
-  margin-top: 25px;
   font-size: 20px;
   line-height: 24px;
   border: solid rgb(98, 98, 98) 1px;
