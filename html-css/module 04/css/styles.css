@@ -19,11 +19,16 @@ body {
   margin: 0 auto;
 }
 
-.nav-list {
+.site-navigation {
   padding: 36px 0px 120px 0px;
+  margin: 0;
 }
 
-.site-logo {
+h1{
+  margin: 0;
+}
+
+.site-logo a {
   float: left;
   font-size: 30px;
   font-weight: 300;
@@ -34,12 +39,12 @@ body {
   text-decoration: none;
 }
 
-.site-logo::first-letter {
+.site-logo a::first-letter {
   color: #1abc9c;
   font-weight: bold;
 }
 
-.site-navigation {
+.site-navigation-list {
   float: right;
   margin: 0;
   padding: 0;
@@ -51,12 +56,11 @@ body {
   vertical-align: middle;
 }
 
-.site-navigation-link:hover,
-.site-navigation-link:focus {
-  color: #1abc9c;
+.site-navigation-item:not(:last-child) {
+  margin-right: 32px;
 }
 
-.site-navigation a {
+.site-navigation-link {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -67,9 +71,12 @@ body {
   color: #0f0101;
 }
 
-.site-navigation-item:not(:last-child) {
-  margin-right: 32px;
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  color: #1abc9c;
 }
+
+/* CATALOG */
 
 h2 {
   clear: both;
@@ -81,10 +88,6 @@ h2 {
   color: #515151;
 }
 
-.featured-title {
-  padding-bottom: 92px;
-}
-
 h2::after {
   display: block;
   width: 164px;
@@ -93,6 +96,10 @@ h2::after {
   content: "";
   margin: auto;
   margin-top: 20px;
+}
+
+.featured-title {
+  padding-bottom: 92px;
 }
 
 .featured-list {
@@ -110,34 +117,12 @@ h2::after {
   width: 22.97%;
 }
 
-.featured-link p {
-  color: #ffffff;
-}
-
-.product-foto {
-  width: 100%;
-}
-
-.featured-item:hover .product-name,
-.featured-item:focus .product-name {
-  background: #1abc9c;
-}
-
-.featured-item:hover .price,
-.featured-item:focus .price {
-  background: #7fd9c7;
-}
-
 .featured-list li:not(:nth-child(4n)) {
   margin-right: 30px;
 }
 
 .featured-list li:nth-child(-n + 4) {
   margin-bottom: 30px;
-}
-
-.featured-item img {
-  float: left;
 }
 
 .product-name,
@@ -159,6 +144,11 @@ h2::after {
   width: 78%;
 }
 
+.featured-item:hover .product-name,
+.featured-item:focus .product-name {
+  background: #1abc9c;
+}
+
 .price {
   float: right;
   background: #8c8c8c;
@@ -166,10 +156,20 @@ h2::after {
   width: 22%;
 }
 
-/* .catalog{
-  
-} */
+.featured-item:hover .price,
+.featured-item:focus .price {
+  background: #7fd9c7;
+}
 
+.product-foto {
+  width: 100%;
+}
+
+.featured-item img {
+  float: left;
+}
+
+/* BLOG */
 
 .blog-title {
   padding-bottom: 80px;
@@ -195,7 +195,7 @@ h2::after {
   margin-right: 30px;
 }
 
-.blog-item a{
+.blog-item a {
   text-decoration: none;
 }
 
