@@ -20,16 +20,19 @@ body {
 }
 
 .site-navigation {
-  padding: 36px 0px 120px 0px;
+  padding: 36px 0 88px 0;
+}
+
+h1 {
   margin: 0;
 }
 
-h1{
-  margin: 0;
+.site-logo {
+  float: left;
 }
 
 .site-logo a {
-  float: left;
+  display: block;
   font-size: 30px;
   font-weight: 300;
   line-height: 32px;
@@ -99,7 +102,7 @@ h2::after {
 }
 
 .featured-title {
-  padding-bottom: 92px;
+  margin-bottom: 92px;
 }
 
 .featured-list {
@@ -113,8 +116,11 @@ h2::after {
 
 .featured-item {
   float: left;
-  vertical-align: middle;
   width: 22.97%;
+  text-decoration: none;
+}
+.featured-link {
+  text-decoration: none;
 }
 
 .featured-list li:not(:nth-child(4n)) {
@@ -125,23 +131,18 @@ h2::after {
   margin-bottom: 30px;
 }
 
-.product-name,
-.price {
-  margin: 0 auto;
-  vertical-align: middle;
-  color: #ffffff;
-  height: 40px;
-  float: left;
-  font-size: 18px;
-  line-height: 40px;
-}
-
 .product-name {
+  display: inline-block;
+  margin: 0;
+  color: #ffffff;
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  font-size: 18px;
   text-align: left;
-  vertical-align: middle;
   background: #323232;
   padding-left: 12px;
-  width: 78%;
+  clear: both;
 }
 
 .featured-item:hover .product-name,
@@ -172,7 +173,7 @@ h2::after {
 /* BLOG */
 
 .blog-title {
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .blog-list {
@@ -228,14 +229,16 @@ h2::after {
 }
 
 .btn-read-more {
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 50px;
+  line-height: 50px;
   font-size: 16px;
   font-weight: 300;
   background: #1abc9c;
   color: #ffffff;
   border-radius: 4px;
+  text-align: center;
   border: 0;
   padding: 0;
   cursor: pointer;
