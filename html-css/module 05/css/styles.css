@@ -141,7 +141,6 @@ main {
 .slider-btn {
   position: absolute;
   bottom: 45%;
-  transform: translateY(-50%);
   width: 104px;
   height: 104px;
   background-color: rgb(26, 188, 156);
