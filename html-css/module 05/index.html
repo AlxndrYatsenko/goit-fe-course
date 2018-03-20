@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="fonts/Pe-icon-7-stroke.ttf" rel="stylesheet">
+  <link href="fonts/Pe-icon-7-stroke.woff" rel="stylesheet">
+
   <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <title>Module 05</title>
@@ -49,12 +51,6 @@
   <main>
     <section class="slider">
       <div class="slider-content">
-        <button class="slider-btn slider-btn-prev">
-          <i class="pe-7s-angle-left "></i>
-        </button>
-        <button class="slider-btn slider-btn-next">
-          <i class="pe-7s-angle-right"></i>
-        </button>
         <ul class="slides">
           <li class="slides-item">
             <img src="img/slide-1.jpg" alt="Four girls">
@@ -64,6 +60,12 @@
             </h3>
           </li>
         </ul>
+        <button class="slider-btn slider-btn-prev">
+          <i class="pe-7s-angle-left "></i>
+        </button>
+        <button class="slider-btn slider-btn-next">
+            <i class="pe-7s-angle-right"></i>
+        </button>
       </div>
     </section>
 
@@ -72,9 +74,10 @@
       <ul class="collection-list clearfix">
         <li class="collection-item">
           <a href="#" class="collection-link">
+            <img src="img/image-1.jpg" alt="Blue tshirt" class="product-foto" width="255" height="322">
             <div class="collection-overlay">
             </div>
-            <ul class="icons">
+            <ul class="icons clearfix">
               <li class="icon-box like">
                 <i class="pe-7s-like"></i>
               </li>
@@ -84,46 +87,19 @@
               <li class="icon-box clock">
                 <i class="pe-7s-clock"></i>
               </li>
-              <li class="icon-box cart">
-                <i class="pe-7s-cart"></i>
-                <span>Add to cart</span>
-              </li>
             </ul>
-            <img src="img/image-1.jpg" alt="Blue tshirt" class="product-foto" width="255" height="322">
             <h4 class="product-name">Blue tshirt
               <span class="price">$26</span>
             </h4>
           </a>
+          <button class="cart">
+            <i class="pe-7s-cart"></i>
+            <span>Add to cart</span>
+          </button>
         </li>
         <li class="collection-item">
           <a href="#" class="collection-link">
-            <div class="card">
-              <div class="collection-overlay">
-              </div>
-              <ul class="icons">
-                <li class="icon-box like">
-                  <i class="pe-7s-like"></i>
-                </li>
-                <li class="icon-box shuffle">
-                  <i class="pe-7s-shuffle"></i>
-                </li>
-                <li class="icon-box clock">
-                  <i class="pe-7s-clock"></i>
-                </li>
-                <li class="icon-box cart">
-                  <i class="pe-7s-cart"></i>
-                  <span>Add to cart</span>
-                </li>
-              </ul>
-              <img src="img/image-2.jpg" alt="Woman shirt" class="product-foto" width="255" height="322">
-              <h4 class="product-name">Woman shirt
-                <span class="price">$31</span>
-              </h4>
-            </div>
-          </a>
-        </li>
-        <li class="collection-item">
-          <a href="#" class="collection-link">
+            <img src="img/image-2.jpg" alt="Woman shirt" class="product-foto" width="255" height="322">
             <div class="collection-overlay">
             </div>
             <ul class="icons">
@@ -136,19 +112,44 @@
               <li class="icon-box clock">
                 <i class="pe-7s-clock"></i>
               </li>
-              <li class="icon-box cart">
-                <i class="pe-7s-cart"></i>
-                <span>Add to cart</span>
+            </ul>
+            <h4 class="product-name">Woman shirt
+              <span class="price">$31</span>
+            </h4>
+          </a>
+          <button class="cart">
+            <i class="pe-7s-cart"></i>
+            <span>Add to cart</span>
+          </button>
+        </li>
+        <li class="collection-item">
+          <a href="#" class="collection-link">
+            <img src="img/image-3.jpg" alt="Yellov tshirt" class="product-foto" width="255" height="322">
+            <div class="collection-overlay">
+            </div>
+            <ul class="icons">
+              <li class="icon-box like">
+                <i class="pe-7s-like"></i>
+              </li>
+              <li class="icon-box shuffle">
+                <i class="pe-7s-shuffle"></i>
+              </li>
+              <li class="icon-box clock">
+                <i class="pe-7s-clock"></i>
               </li>
             </ul>
-            <img src="img/image-3.jpg" alt="Yellov tshirt" class="product-foto" width="255" height="322">
             <h4 class="product-name">Yellov tshirt
               <span class="price">$21</span>
             </h4>
           </a>
+          <button class="cart">
+            <i class="pe-7s-cart"></i>
+            <span>Add to cart</span>
+          </button>
         </li>
         <li class="collection-item">
           <a href="#" class="collection-link">
+            <img src="img/image-4.jpg" alt="Cool lingerie" class="product-foto" width="255" height="322">
             <div class="collection-overlay">
             </div>
             <ul class="icons">
@@ -161,16 +162,15 @@
               <li class="icon-box clock">
                 <i class="pe-7s-clock"></i>
               </li>
-              <li class="icon-box cart">
-                <i class="pe-7s-cart"></i>
-                <span>Add to cart</span>
-              </li>
             </ul>
-            <img src="img/image-4.jpg" alt="Cool lingerie" class="product-foto" width="255" height="322">
             <h4 class="product-name">Cool lingerie
               <span class="price">$56</span>
             </h4>
           </a>
+          <button class="cart">
+            <i class="pe-7s-cart"></i>
+            <span>Add to cart</span>
+          </button>
         </li>
 
       </ul>

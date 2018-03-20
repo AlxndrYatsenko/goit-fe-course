@@ -24,15 +24,15 @@ img {
 
 header {
   width: 100vw;
+  position: relative;
   background-color: #ffffff;
 }
 .container {
-  width: 1110px;
   margin: 0 auto;
 }
 
 .site-navigation {
-  padding: 36px 0 32px 0;
+  padding: 34px 0;
 }
 
 h1 {
@@ -40,7 +40,10 @@ h1 {
 }
 
 .site-logo {
-  float: left;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
 }
 
 .site-logo a {
@@ -60,7 +63,11 @@ h1 {
 }
 
 .site-navigation-list {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  max-width: 50%;
   margin: 0;
   padding: 0;
   line-height: 32px;
@@ -93,7 +100,7 @@ h1 {
 
 
 main {
-  width: 1600px;
+  width: 100%;
   margin: 0 auto;
   background-color: rgb(233, 240, 253);
 }
@@ -101,12 +108,18 @@ main {
 /* SLIDER */
 
 .slider {
-  position: relative;
   margin-bottom: 100px;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.slider img{
+  
+  margin: 0 auto;
 }
 
 .slider-content {
-  height: 600px;
+  position: relative;
   color: #ffffff;
   font-size: 18px;
 }
@@ -116,19 +129,23 @@ main {
   content: "";
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgb(0, 0, 2);
   opacity: 0.522;
   width: 100%;
+  max-width: 1600px;
   height: 100%;
 }
 
 .slider-btn {
   position: absolute;
+  bottom: 45%;
+  transform: translateY(-50%);
   width: 104px;
   height: 104px;
   background-color: rgb(26, 188, 156);
   font-family: "Pe-icon-7-stroke";
-  top: 228px;
   padding: 0;
   font-size: 100px;
   color: #ffffff;
@@ -139,11 +156,11 @@ main {
 }
 
 .slider-btn-prev {
-  left: 245px;
+  left: 15%;
 }
 
 .slider-btn-next {
-  right: 245px;
+  right: 15%;
 }
 
 .slider-btn i {
@@ -162,19 +179,20 @@ main {
 .slides {
   margin: 0 auto;
   padding: 0;
-  width: 1600px;
+  width: 100%;
   height: 100%;
+  list-style: none;
 }
 
 .slides-item {
   height: 100%;
 }
 
-.slider-content h3 {
+.slides-item h3 {
   font-family: "Roboto";
   text-align: left;
   position: absolute;
-  top: 218px;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%);
   margin: 0;
@@ -182,10 +200,11 @@ main {
   line-height: 1.367;
   text-transform: uppercase;
   z-index: 10;
+  max-width: 765px;
 }
 
 
-.slider-content span {
+.slides-item span {
   display: block;
   font-size: 18px;
   font-weight: normal;
@@ -221,6 +240,9 @@ h2::after {
 }
 
 .collection-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding: 0;
   margin: 0 auto;
   list-style: none;
@@ -228,10 +250,10 @@ h2::after {
   text-transform: uppercase;
   font-size: 0;
   padding-bottom: 100px;
+  text-align: center;
 }
 
 .collection-item {
-  float: left;
   position: relative;
   width: 255px;
   height: 322px;
@@ -248,12 +270,13 @@ h2::after {
 .collection-overlay {
   position: absolute;
   top: 0;
-  border: 10px solid #ffffff;
   width: 100%;
   height: 282px;
   background-color: rgb(0, 0, 0);
+  border: 10px solid #ffffff;
   opacity: 0;
 }
+
 
 .collection-item:hover .collection-overlay,
 .collection-item:focus .collection-overlay {
@@ -275,6 +298,7 @@ h2::after {
   display: inline-block;
   color: #ffffff;
   border: 1px solid rgb(255, 255, 255);
+  z-index: 12;
 }
 
 .icon-box:hover,
@@ -284,22 +308,18 @@ h2::after {
 }
 
 .icons .icon-box:not(:last-child) {
-  margin-bottom: 7px;
-}
-
-.icons .icon-box:not(:nth-last-child(-n + 2)) {
   margin-right: 7px;
 }
 
 .icons {
   position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 158px;
   list-style: none;
   display: inline-block;
   padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   opacity: 0;
 }
 
@@ -312,21 +332,51 @@ h2::after {
 }
 
 .cart {
-  display: inline-block;
-  width: 100%;
+  position: absolute;
+  top: 146px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 48px;
+  width: 158px;
   background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+opacity: 0;
+z-index: 12;
 }
 
 .cart i {
+  vertical-align: middle;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translate(-50%, -50%);
+  font-family: "Pe-icon-7-stroke";
+  font-size: 30px;
+  line-height: 48px;
   left: 22px;
 }
 
 .cart span {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #ffffff;
   margin-right: 20px;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
+}
+
+.collection-item:hover .cart{
+opacity: 1;
+}
+
+.cart:hover {
+background-color: #1abc9c;
 }
 
 .product-name {
