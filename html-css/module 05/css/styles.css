@@ -23,7 +23,8 @@ img {
 /* MENU NAVIGATION */
 
 header {
-  width: 100vw;
+  max-width: 1170px;
+  margin: 0 auto;
   position: relative;
   background-color: #ffffff;
 }
@@ -32,7 +33,7 @@ header {
 }
 
 .site-navigation {
-  padding: 34px 0;
+  padding: 36px 0 32px 0;
 }
 
 h1 {
@@ -40,10 +41,7 @@ h1 {
 }
 
 .site-logo {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translateY(-50%);
+  float: left;
 }
 
 .site-logo a {
@@ -63,10 +61,7 @@ h1 {
 }
 
 .site-navigation-list {
-  position: absolute;
-  top: 50%;
-  right: 15%;
-  transform: translateY(-50%);
+  float: right;
   max-width: 50%;
   margin: 0;
   padding: 0;
