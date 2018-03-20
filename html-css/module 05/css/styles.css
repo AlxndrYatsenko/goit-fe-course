@@ -108,9 +108,10 @@ main {
 /* SLIDER */
 
 .slider {
-  margin-bottom: 100px;
   margin: 0 auto;
+  margin-bottom: 100px;
   max-width: 1600px;
+  height: auto;
 }
 
 .slider img{
@@ -224,6 +225,7 @@ h2 {
   color: #515151;
 }
 
+
 h2::after {
   display: block;
   width: 164px;
@@ -235,6 +237,7 @@ h2::after {
 }
 
 .collection-title {
+  /* margin-top: 100px; */
   margin-bottom: 80px;
 }
 
