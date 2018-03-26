@@ -41,12 +41,6 @@ img {
   align-items: flex-end;
 }
 
-.nav-list {
-  font-family: "Montserrat", sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
 .site-logo {
   display: block;
   color: var( --color-turquoice);
@@ -65,10 +59,21 @@ img {
   flex-wrap: wrap;
   list-style: none;
   max-width: 600px;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list-item {
   position: relative;
+}
+
+.nav-list-link{
+transition: color 0.4s linear;
+}
+
+.nav-list-item::after {
+transition: opacity 0.4s linear;
 }
 
 .nav-list-item:hover .nav-list-link,
@@ -76,8 +81,7 @@ img {
   color: var(--color-tomato);
 }
 
-.nav-list-item:hover::after,
-.nav-list-item:focus::after {
+.nav-list-item::after {
   position: absolute;
   display: block;
   width: 100%;
@@ -85,7 +89,14 @@ img {
   background-color:var(--color-tomato);
   content: "";
   margin-top: 10px;
+  opacity: 0;
 }
+
+.nav-list-item:hover::after,
+.nav-list-item:focus::after {
+  opacity: 1;
+}
+
 
 .nav-list-item:not(:last-child) {
   margin-right: 55px;
@@ -99,6 +110,11 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: var( --color-turquoice);
+  
+}
+
+.main{
+  margin-bottom: 82px;
 }
 
 /* SERVICES */
@@ -224,7 +240,7 @@ img {
 }
 
 .our-team {
-  margin: 0 0 82px 0;
+  margin: 0 auto;
 }
 
 .about-team {
@@ -246,6 +262,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  
 }
 
 .team-list-item {
@@ -274,8 +291,7 @@ img {
   transition: transform 0.3s linear; 
 }
 
-.team-list-item:hover
-.image-conteiner{
+.image-conteiner:hover{
   transform: translate(-10px, -10px);
 }
 
@@ -297,9 +313,8 @@ img {
   opacity: 0;
   transition: opacity 0.3s linear,  transform 0.3s linear; 
 }
-
-.team-list-item:hover .overlay,
-.team-list-item:focus .overlay {
+.image-conteiner:hover .overlay,
+.image-conteiner:focus .overlay {
   opacity: 1;
 }
 
@@ -369,7 +384,6 @@ img {
 .team-list-socials-item:hover,
 .team-list-socials-item:hover {
   background-color: var(--color-tomato);
-  
 }
 
 .team-item-name {
