@@ -229,7 +229,6 @@ html {
 .contact-us {
   margin: 0 auto;
   padding-top: 86px;
-  height: 100vh;
   background-color: var(--color-black);
   background-image: url(../img/Map-Image.png);
   background-repeat: no-repeat;
