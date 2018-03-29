@@ -230,11 +230,15 @@ html {
   margin: 0 auto;
   padding-top: 86px;
   background-color: var(--color-black);
-  background-image: url(../img/Map-Image.png);
-  background-repeat: no-repeat;
-  background-position: right top 122px;
 }
 
+.container-background{
+  max-width: 1400px;
+  margin: 0 auto;
+  background-image: url(../img/Map-Image.png);
+  background-repeat: no-repeat;
+  background-position: right top 36px;
+}
 .contact-us .section-title {
   color: var(--color-white);
 }
