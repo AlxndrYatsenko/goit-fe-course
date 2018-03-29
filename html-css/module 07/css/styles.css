@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Droid Serif";
-  src: url("../fonts/DroidSerif-Italic.woff");
+  src: url("../fonts/droidSerif-Italic.woff");
 }
 
 /* montserrat-regular - latin */
@@ -69,6 +69,11 @@ html {
 }
 
 .site-logo {
+  margin: 0;
+  padding: 0;
+}
+
+.site-logo-link {
   display: block;
   font-family: "Wisdom Script AI";
   color: var(--color-golden);
@@ -264,21 +269,29 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  border: 1px solid var(--color-lightgrey);
-  border-radius: 2px;
-  background-color: var(--color-white);
   font-size: 14px;
   line-height: 16px;
+  border: 1px solid var(--color-lightgrey);
+  background-color: var(--color-white);
+  color: var(--color-grey);
+  border-radius: 2px;
   height: 54px;
   width: 455px;
   padding: 0 0 0 20px;
 }
+
+.name::placeholder,
+.email::placeholder,
+.subject::placeholder,
+.text-field::placeholder {
+  color: var(--color-grey);
+}
+
 .text-field {
   height: 222px;
   padding-top: 20px;
+  resize: none;
 }
-
-/* input:not(:placeholder-shown){} */
 
 input:valid:not(:placeholder-shown) {
   outline: 3px solid rgb(2, 226, 2);
@@ -298,10 +311,6 @@ textarea:valid:not(:placeholder-shown) {
 
 textarea:invalid:not(:placeholder-shown) {
   outline: 3px solid rgb(226, 2, 2);
-}
-
-textarea:optional:not(:placeholder-shown) {
-  outline: none;
 }
 
 .btn-submit {
