@@ -1,11 +1,10 @@
+/* noto-serif-italic - latin */
 @font-face {
-  font-family: "Wisdom Script AI";
-  src: url("../fonts/wisdom-script-ai.woff");
-}
-
-@font-face {
-  font-family: "Droid Serif";
-  src: url("../fonts/droidSerif-Italic.woff");
+  font-family: "Noto Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Noto Serif Italic"), local("NotoSerif-Italic"),
+    url("../fonts/noto-serif-v6-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* montserrat-regular - latin */
@@ -25,10 +24,13 @@
     url("../fonts/montserrat-v12-latin-700.woff") format("woff"); /* Modern Browsers */
 }
 
+/* great-vibes-regular - latin */
 @font-face {
-  font-family: "Roboto Slab";
-  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"),
-    url("../fonts/roboto-slab-v7-latin-regular.woff") format("woff");
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Great Vibes"), local("GreatVibes-Regular"),
+      url("../fonts/great-vibes-v5-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 html {
@@ -75,7 +77,7 @@ html {
 
 .site-logo-link {
   display: block;
-  font-family: "Wisdom Script AI";
+  font-family: "Great Vibes";
   color: var(--color-golden);
   font-size: 26px;
   line-height: 41px;
@@ -147,7 +149,7 @@ html {
 }
 
 .under-title {
-  font-family: "Droid Serif";
+  font-family: "Noto Serif";
   font-style: italic;
   font-size: 16px;
   line-height: 19px;
@@ -232,7 +234,19 @@ html {
   background-color: var(--color-black);
 }
 
-.container-background{
+.Logo_Treehouse {
+  font-size: 26px;
+  font-family: "Wisdom";
+  color: rgb(255, 255, 255);
+  line-height: 1.577;
+  text-align: left;
+  position: absolute;
+  left: 235.937px;
+  top: 37.499px;
+  z-index: 53;
+}
+
+.container-background {
   max-width: 1400px;
   margin: 0 auto;
   background-image: url(../img/Map-Image.png);
