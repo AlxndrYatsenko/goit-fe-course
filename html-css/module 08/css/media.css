@@ -23,7 +23,7 @@
     margin-bottom: 122px;
   }
 
-  .find{
+  .find {
     min-height: 700px;
   }
 
@@ -35,11 +35,13 @@
   .upper-title {
     font-size: 24px;
     width: auto;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
-
-  .btn-link {
+  .find-link {
     width: 226px;
+  }
+  .see-other-link {
+    width: 192px;
   }
 
   .partners-list {
@@ -47,7 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .partners-item {
@@ -63,10 +65,9 @@
 
   .find {
     width: 939px;
-    background: linear-gradient(rgba(26, 25, 21, 0.2), rgba(26, 25, 21, 0.2)),
+    background: linear-gradient(rgba(26, 25, 21, 0.4), rgba(26, 25, 21, 0.4)),
       url(../img/image-tablet.jpg) top center no-repeat;
     background-size: cover;
-    
   }
 
   .header {
