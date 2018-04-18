@@ -60,6 +60,9 @@ img {
   color: var(--color-white);
   margin: 0 auto 66px auto;
   padding-top: 20px;
+  background: linear-gradient(rgba(26, 25, 21, 0.3), rgba(26, 25, 21, 0.3)),
+  url(../img/image.jpg)top no-repeat;
+  background-size: cover;
 }
 
 .container {
