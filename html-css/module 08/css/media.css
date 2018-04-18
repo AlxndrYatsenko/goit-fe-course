@@ -1,9 +1,10 @@
 @media (max-width: 659.98px) {
   .find {
-    width: 320px;
+    /* width: 320px; */
     min-height: 540px;
     background: linear-gradient(rgba(26, 25, 21, 0.3), rgba(26, 25, 21, 0.3)),
-      url(../img/image-phone.jpg) no-repeat;
+      url(../img/image-phone.jpg)top no-repeat;
+      background-size: cover;
   }
 
   .partners-list .partners-item:not(:last-child) {
