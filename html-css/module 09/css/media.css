@@ -1,0 +1,49 @@
+@media (max-width: 767.98px) {
+  .find {
+    min-height: 540px;
+  }
+
+  .header{
+    min-height: 150px;
+  }
+
+  .header .row > [class*='col-']:first-child {
+    margin-bottom: 118px;
+  }
+
+   .partners-list .partners-item:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  .partners-list .partners-item:not(:last-child) {
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 140px; 
+  }
+
+  .find {
+    min-height: 700px;
+  }
+
+  .find-title {
+    font-size: 50px;
+  }
+
+  .upper-title {
+    font-size: 24px;
+  }
+  .find-link {
+    max-width: 226px;
+  }
+  
+  .see-other-link {
+    max-width: 192px;
+  }
+}
+
