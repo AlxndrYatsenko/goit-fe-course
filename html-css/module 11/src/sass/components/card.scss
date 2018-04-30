@@ -1,0 +1,105 @@
+.card__image-background {
+  margin-bottom: 26px;
+  background: $primary-bg-color;
+}
+
+.card__image-conteiner {
+  transition: transform 0.3s linear;
+
+  &:hover {
+    transform: translate(-10px, -10px);
+  }
+
+  &:hover .card__overlay,
+  &:focus .card__overlay {
+    opacity: 1;
+  }
+}
+
+.card__overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0px;
+  width: 380px;
+  height: 470px;
+  border: none;
+  background: linear-gradient(
+    to top,
+    rgba(252, 227, 138, 0.9),
+    rgba(243, 129, 129, 0.9)
+  );
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+}
+
+.card__socials{
+  @extend %list;
+
+  .card__item:nth-child(6n) {
+    border-right: none;
+  }
+
+  .card__item:not(:nth-last-child(-n + 5)) {
+    margin-bottom: 5px;
+  }
+ 
+  .card__item:not(:nth-last-child(-n + 1)) {
+    border-right: 1px solid $primary-color-tomato;
+  }
+}
+
+.card__item {
+ 
+  width: 56px;
+  height: 56px;
+  background-color: $primary-color-yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+  // cursor: pointer;
+  transition: background-color 0.4s linear;
+
+  &:hover,
+  &:hover {
+    background-color: $primary-color-tomato;
+  }
+
+  &:hover .card__icon {
+    fill: $primary-color-white;
+  }
+}
+
+.card__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card__icon {
+  width: 26px;
+  height: 26px;
+  fill: $primary-color-tomato;
+  transition: fill 0.4s linear;
+}
+
+.card__name {
+  text-transform: uppercase;
+  line-height: 16px;
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.card__pos {
+  font-size: 15px;
+  color: $primary-color-grey-text;
+  font-family: $secondary-font-family;
+  // font-weight: 300;
+  font-style: italic;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}

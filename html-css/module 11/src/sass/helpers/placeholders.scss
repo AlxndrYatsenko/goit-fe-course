@@ -1,0 +1,36 @@
+%link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+%list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+%button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: scale(1.2) 0.3s linear;
+  transition-duration: 0.2s;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+}

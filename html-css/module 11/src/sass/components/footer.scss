@@ -1,0 +1,68 @@
+.footer {
+  @extend %container;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $primary-border-color;
+  min-height: 62px;
+}
+
+.copy {
+  margin: 0;
+}
+
+.copy__link {
+  color: $primary-color-tomato;
+  text-decoration: none;
+}
+
+.subscribe {
+  display: flex;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: $secondary-font-family;
+  color: $primary-color-lightgrey;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.subscribe__button {
+  @extend %button;
+  background-color: $primary-bg-color;
+  color: $primary-color-white;
+  width: 150px;
+  font-weight: 700;
+}
+
+.subscribe__input {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 24px;
+  border: 1px solid $primary-color-grey-text;
+  color: $primary-color-lightgrey;
+  border-right: none;
+  min-width: 232px;
+  height: 42px;
+  margin: 0;
+  padding: 0 0 0 12px;
+  vertical-align: middle;
+
+  &::placeholder{
+    color: $primary-color-lightgrey;
+  }
+}
+
+input {
+  &:valid:not(:placeholder-shown) {
+    outline: 2px solid rgb(2, 226, 2);
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    outline: 2px solid rgb(226, 2, 2);
+  }
+}

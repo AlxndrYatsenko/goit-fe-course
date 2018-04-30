@@ -1,0 +1,25 @@
+.banner {
+  min-height: 1000px;
+  margin-bottom: 38px;
+  background: linear-gradient(
+      to top,
+      rgba(252, 227, 138, 0.9),
+      rgba(243, 129, 129, 0.9)),
+    url(../img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $primary-font-family;
+  color: $primary-color-white;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .banner {
+      background: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.9),
+        rgba(243, 129, 129, 0.9)
+      ),
+      url(../img/banner@2x.jpg);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*
+   Import partials below
+*/
+@import 'helpers/variables';
+@import 'helpers/placeholders';
+@import 'base';
+@import 'normalize';
+@import 'fonts';
+
+/*
+   Components styles
+*/
+@import 'components/body';
+@import 'components/banner';
+@import 'components/site-logo';
+@import 'components/site-navigation';
+@import 'components/button';
+@import 'components/main';
+@import 'components/services';
+@import 'components/title';
+@import 'components/team';
+@import 'components/card';
+@import 'components/footer';

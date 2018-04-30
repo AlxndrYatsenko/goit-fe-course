@@ -1,0 +1,54 @@
+.section__over-title {
+  font-family: $script-font-family;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 14px;
+
+  &--banner {
+    font-size: 72px;
+    color: $primary-color-white;
+    line-height: 1;
+    margin: 0 auto;
+    margin-bottom: 36px;
+  }
+}
+
+.section__title {
+  position: relative;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: $primary-color-tomato;
+    margin: 0 auto;
+    margin-top: 36px;
+  }
+
+  &--banner {
+    font-size: 150px;
+    line-height: 1;
+    color: $primary-color-white;
+    margin-bottom: 96px;
+  }
+
+  &--banner::after {
+    display: none;
+  }
+
+  &--services {
+    margin-bottom: 62px;
+  }
+
+  &--team {
+    margin-bottom: 40px;
+  }
+}
