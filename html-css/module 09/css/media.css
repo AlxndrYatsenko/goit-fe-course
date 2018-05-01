@@ -5,6 +5,7 @@
 
   .header{
     min-height: 150px;
+    margin-bottom: 30px;
   }
 
   .header .row > [class*='col-']:first-child {
