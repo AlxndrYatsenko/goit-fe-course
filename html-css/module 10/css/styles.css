@@ -197,10 +197,10 @@ img {
 }
 
 .main{
-  margin-bottom: 40px;
+  margin-bottom: 78px;
 }
 
-.section__over-title {
+.over-title {
   font-family: "Kaushan Script", cursive;
   font-size: 24px;
   line-height: 28px;
@@ -210,7 +210,7 @@ img {
   margin-bottom: 14px;
 }
 
-.section__over-title--banner {
+.banner__over-title {
   font-size: 72px;
   color: var(--color-white);
   line-height: 1;
@@ -218,7 +218,7 @@ img {
   margin-bottom: 36px;
 }
 
-.section__title {
+.title {
   position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -230,14 +230,14 @@ img {
   margin: 0 auto;
 }
 
-.section__title--banner {
+.banner__title {
   font-size: 150px;
   line-height: 1;
   color: var(--color-white);
   margin-bottom: 96px;
 }
 
-.section__title::after {
+.title::after {
   display: block;
   content: "";
   width: 60px;
@@ -247,7 +247,7 @@ img {
   margin-top: 36px;
 }
 
-.section__title--banner::after {
+.banner__title::after {
   display: none;
 }
 
@@ -263,6 +263,14 @@ img {
   width: 158px;
   height: 38px;
   cursor: pointer;
+  transition: scale(1.2) 0.3s linear;
+  transition-duration: 0.2s;
+}
+
+.learn-more:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /* SERVICES */
@@ -270,7 +278,7 @@ img {
   margin-bottom: 82px;
 }
 
-.section__title--services {
+.services__title {
   margin-bottom: 62px;
 }
 
@@ -361,12 +369,8 @@ img {
   text-align: center;
 }
 
-.section__title--team {
+.team__title {
   margin-bottom: 40px;
-}
-
-.team__list {
-  margin-bottom: 78px;
 }
 
 .team__item {
@@ -587,6 +591,14 @@ img {
   vertical-align: middle;
 }
 
+input:valid:not(:placeholder-shown) {
+  outline: 2px solid #02e202;
+}
+
+input:invalid:not(:placeholder-shown) {
+  outline: 2px solid #e20202;
+}
+
 .subscribe__button {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -597,13 +609,13 @@ img {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  transition: scale(1.2) 0.3s linear;
+  transition-duration: 0.2s;
+
 }
 
 .subscribe__button:hover {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition-duration: 0.2s;
-       -o-transition-duration: 0.2s;
-          transition-duration: 0.2s;
 }
