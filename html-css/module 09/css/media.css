@@ -22,11 +22,17 @@
 }
 
 @media (min-width: 768px) {
-  .header {
+.find .container > [class*='row']:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.header {
     flex-direction: row-reverse;
     align-items: center;
-    margin-bottom: 140px; 
+    margin-bottom: 154px; 
   }
+
+
 
   .find {
     min-height: 700px;

@@ -82,9 +82,6 @@ img {
   
 }
 
-.signup{
-  /* margin-right: 20px; */
-}
 
 .registration-link {
   display: inline-block;
@@ -106,7 +103,6 @@ img {
 }
 
 .logo {
-  /* display: inline-block; */
   display: flex;
   align-items: center;
   margin: 0;
@@ -137,7 +133,7 @@ img {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin: 0 0 10px 0;
+  /* margin: 0 0 10px 0; */
 }
 
 .upper-title {
