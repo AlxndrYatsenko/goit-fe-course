@@ -2,7 +2,6 @@
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attempts = 3;
-let userInput;
 let userPassword;
 
 do {
@@ -22,4 +21,3 @@ do {
     }
   }
 } while (true);
-console.log(passwords.includes(userPassword));
