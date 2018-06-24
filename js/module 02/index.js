@@ -20,5 +20,7 @@ for (let i in numbers) {
     total += numbers[i];
   }
 }
-console.log(numbers);
-alert(`Общая сумма чисел равна ${total}`);
+
+if (numbers.length >= 1) {
+  alert(`Общая сумма чисел равна ${total}`);
+}
