@@ -1,3 +1,5 @@
+"use strict";
+
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 const login = prompt('Введите пароль');
 const parolIsIncorrect = 'Ошибка! Логин должен быть от 4 до 16 символов';
