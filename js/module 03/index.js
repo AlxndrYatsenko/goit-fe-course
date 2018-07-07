@@ -19,7 +19,7 @@ const checkLoginValidity = function(login) {
 const checkIfLoginExists = function(logins, login) {
   let result = logins.includes(login)
   if (result === true){
-    return true
+    return true;
   }else{return false}
 };
 
@@ -29,9 +29,9 @@ const addLogin = function (logins, login){
       logins.push(login);
       return parolAdd;
     }else {
-      return passInUse
+      return passInUse;
     }
   }else {return parolIsIncorrect}
 };
 
-console.log(addLogin(logins, login))
+console.log(addLogin(logins, login));
