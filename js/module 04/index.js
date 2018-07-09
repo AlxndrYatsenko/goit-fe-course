@@ -41,17 +41,9 @@ function Cashier(name, productsDatabase) {
   };
 
   this.countTotalPrice = function(obj) {
-    let objEntries = Object.entries(obj);
-    let productsEntries = Object.entries(products);
-    let result = 0;
-    for (const i of objEntries) {
-      for (const k of productsEntries) {
-        if (k[0] === i[0]) {
-          result += k[1] * i[1];
-        }
-      }
+    for (const key in order) {
+      this.totalPrice += order[key] * products[key];
     }
-    this.totalPrice = result;
     return this.totalPrice;
   };
 
