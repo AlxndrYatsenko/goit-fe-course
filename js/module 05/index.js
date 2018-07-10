@@ -167,8 +167,7 @@ console.log(getTotalBalance(users)); // 20916
  * Массив имен всех пользователей у которых есть друг с указанным именем
  */
 const getUsersByFriend = (arr, name) =>
-  arr.filter(user => user.friends.includes(name))
-  .map(user => user.name);
+  arr.filter(user => user.friends.includes(name)).map(user => user.name);
 
 console.log(getUsersByFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
@@ -181,21 +180,27 @@ console.log(getUsersByFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree
  * Получить массив всех скиллов всех пользователей (поле skills), при этом не должно быть
  * повторяющихся скиллов и они должны быть отсортированы в алфавитном порядке
  */
-const getAllSkills = arr => arr
-// .map(user => user.skills)
-.reduce((acc, x) => x.skills ? acc.concat(x.skills) : acc, [])
-.filter(skill => {
-  const arr = []
-  if(!arr.includes(skill)){arr.push(skill)}
-  return arr
-});
+const getAllSkills = arr =>  arr
+.reduce((acc, current) => (current.skills ? acc.concat(current.skills) : acc), [])
+.reduce((acc, current) => {
+  if (!acc.includes(current)) {
+    acc.push(current);
+  }
+  return acc;
+}, [])
+.sort();
 
+//
 console.log(getAllSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+
 
 // /**
 // * Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 // */
-// const getUserNamesSortedByFriendsCount = arr => {...};
+const getUserNamesSortedByFriendsCount = arr => arr
+.sort((prev, next) => prev.friends.length > next.friends.length)
+.map(user => user.name);
 
-// console.log(getUserNamesSortedByFriendsCount(users));
+console.log(getUserNamesSortedByFriendsCount(users));
