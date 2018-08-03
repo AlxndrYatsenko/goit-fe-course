@@ -44,7 +44,6 @@ function Cashier(name, productsDatabase) {
     for (const key in obj) {
       this.totalPrice += order[key] * products[key];
     }
-    return this.totalPrice;
   };
 
   this.getCustomerMoney = function(value) {
