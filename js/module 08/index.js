@@ -111,6 +111,7 @@ function createFirstFullviewItem(obj = galleryItems[0]) {
 const firstFullviewItem = createFirstFullviewItem()
 
 function handleCreateFullviewItem(evt) {
+  evt.preventDefault();
   fullview.firstChild.remove()
 
   const target = evt.target
@@ -123,77 +124,3 @@ function handleCreateFullviewItem(evt) {
   window.removeEventListener('click', handleCreateFullviewItem);
 }
 
-
-// class Gallery{
-//   constructor({items, parentNode, defaultActiveItem}){
-//     this.items = items;
-//     this.parentNode = parentNode;
-//     this.defaultActiveItem = defaultActiveItem;
-//   }
-
-
-
-  // createPreviewItem(obj) {
-
-  //   const previewList = document.createElement('ul')
-  //   previewList.classList.add('preview-list')
-
-  //   parentNode.appendChild(fullview)
-  //   parentNode.appendChild(previewList)
-
-  //   const item = document.createElement('li')
-  //   item.classList.add('preview-list__item')
-    
-  //   const img = document.createElement('img')
-  //   img.setAttribute('src', obj.preview)
-  //   img.setAttribute('data-fullview', obj.fullview)
-  //   img.setAttribute('alt', obj.alt)
-  
-  //   item.appendChild(img)
-  //   previewList.appendChild(item)
-  
-  //   return item
-  // }
-
-  // createPreviewItems(arr) {
-  //   const listItems = arr.map(elem => createPreviewItem(elem))
-  //   return listItems
-  // }
-  
-  // createFirstFullviewItem(obj = galleryItems[0]) {
-  //   const fullview = document.createElement('div')
-  //   fullview.classList.add('fullview')
-
-  //   const img = `<img src=${obj.fullview} alt=${obj.alt}>`
-    
-  //   fullview.insertAdjacentHTML('afterbegin', img);
-  
-  // }
-
-  // handleCreateFullviewItem(evt) {
-  //   fullview.firstChild.remove()
-  
-  //   const target = evt.target
-  //   const src = target.dataset.fullview
-  //   const alt = target.getAttribute('alt')
-  
-  //   const img = `<img src=${src} alt=${alt}>`
-  
-  //   fullview.insertAdjacentHTML('afterbegin', img);
-  //   window.removeEventListener('click', handleCreateFullviewItem);
-  // }
-
-// }
-
-
-
-
-
-
-const Gallery = new Gallery({
-  items: galleryItems,
-  parentNode: document.querySelector('.image-gallery'),
-  defaultActiveItem: 1
-});
-
-console.log(Gallery)
