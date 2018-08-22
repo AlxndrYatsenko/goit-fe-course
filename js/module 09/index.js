@@ -1,125 +1,147 @@
 'use strict';
 
-/*
-  Создайте компонент галлереи изображений следующего вида.
-  
-    <div class="image-gallery js-image-gallery">
-      <div class="fullview">
-        <!-- Если выбран первый элемент из preview -->
-        <img src="img/fullview-1.jpeg" alt="alt text 1">
-      </div>
-      <!-- li будет столько, сколько объектов в массиве картинок. Эти 3 для примера -->
-      <ul class="preview">
-        <li><img src="img/preview-1.jpeg" data-fullview="img/fullview-1.jpeg" alt="alt text 1"></li>
-        <li><img src="img/preview-2.jpeg" data-fullview="img/fullview-2.jpeg" alt="alt text 2"></li>
-        <li><img src="img/preview-3.jpeg" data-fullview="img/fullview-3.jpeg" alt="alt text 3"></li>
-      </ul>
-    </div>   
-    
-    🔔 Превью компонента: https://monosnap.com/file/5rVeRM8RYD6Wq2Nangp7E4TkroXZx2
-      
-      
-    Реализуйте функционал:
-      
-      - image-gallery есть изначально в HTML-разметке как контейнер для компонента.
-    
-      - fullview содержит в себе увеличенную версию выбранного изображения из preview, и
-        создается динамически при загрузке страницы.
-    
-      - preview это список маленьких изображений, обратите внимание на атрибут data-fullview,
-        он содержит ссылку на большое изображение. preview и его элементы, также создаются 
-        динамически, при загрузке страницы.
-        
-      - При клике в элемент preview, необходимо подменить src тега img внутри fullview
-        на url из data-атрибута выбраного элемента.
-        
-      - По умолчанию, при загрузке страницы, активным должен быть первый элемент preview.
-        
-      - Изображений может быть произвольное количество.
-      
-      - Используйте делегирование для элементов preview.
-      
-      - При клике, выбраный элемент из preview должен получать произвольный эффект выделения.
-      
-      - CSS-оформление и имена классов на свой вкус.
-      
-      
-    🔔 Изображения маленькие и большие можно взять с сервиса https://www.pexels.com/, выбрав при скачивании
-      размер. Пусть маленькие изображения для preview будут 320px по ширине, большие для fullview 1280px.
-      Подберите изображения одинаковых пропорций.
-*/
+const watches = document.querySelector('.wrapper');
 
-/*
-  Массив объектов с данными для создания компонента выглядит следующим образом.
-  Замените пути на соотвествующие вашим, или назовите изображения аналогично.
-*/
+class Stopwatch {
+  constructor({
+    watches
+  }) {
+    this.watches = watches;
+    this.createStopwatch();
+    this.isActive = false;
+    this.startTime = null;
+    this.deltaTime = null;
+    this.id = null;
+  }
 
-const galleryItems = [
-  { preview: 'https://fastpic.co/images/preview-177ff492484cedec3.jpg', fullview: 'https://fastpic.co/images/fullview-1164e81ee96e1fe93.jpg', alt: 'alt text 1' },
-  { preview: 'https://fastpic.co/images/preview-291675eb3e57e18a5.jpg', fullview: 'https://fastpic.co/images/fullview-274b64fa07a02839d.jpg', alt: 'alt text 2' },
-  { preview: 'https://fastpic.co/images/preview-32adbfc3d9581e297.jpg', fullview: 'https://fastpic.co/images/fullview-3859036371fb752b3.jpg', alt: 'alt text 3' },
-  { preview: 'https://fastpic.co/images/preview-46d0073719e526869.jpg', fullview: 'https://fastpic.co/images/fullview-46931ce18ff52858a.jpg', alt: 'alt text 4' },
-  { preview: 'https://fastpic.co/images/preview-5826c57ca2d65a1ec.jpg', fullview: 'https://fastpic.co/images/fullview-58f7f2eb79ecde98a.jpg', alt: 'alt text 5' },
-  { preview: 'https://fastpic.co/images/preview-6dcb03740472b21e8.jpg', fullview: 'https://fastpic.co/images/fullview-6a3a07916c0b6fadd.jpg', alt: 'alt text 6' },
-];
+  createStopwatch() {
+    const section = document.createElement('section')
+    section.classList.add('watches')
 
+    const div = document.createElement('div')
+    div.classList.add('stopwatch')
 
-const parentNode = document.querySelector('.js-image-gallery')
+    const p = document.createElement('p');
+    p.classList.add('clockface')
+    p.classList.add('js-time')
+    p.textContent = '00:00.0'
 
-const fullview = document.createElement('div')
-fullview.classList.add('fullview')
-parentNode.appendChild(fullview)
+    const startBtn = document.createElement('button');
+    startBtn.classList.add('timer-btn')
+    startBtn.classList.add('js-start')
+    startBtn.textContent = 'Start'
+    startBtn.addEventListener('click', this.handleStartTimer.bind(this));
 
+    const resetBtn = document.createElement('button');
+    resetBtn.classList.add('timer-btn')
+    resetBtn.classList.add('js-reset')
+    resetBtn.textContent = 'Reset'
+    resetBtn.addEventListener('click', this.hadleResetTimer.bind(this));
 
-const previewList = document.createElement('ul')
-previewList.classList.add('preview-list')
-parentNode.appendChild(previewList)
+    const lapBtn = document.createElement('button');
+    lapBtn.classList.add('timer-btn')
+    lapBtn.classList.add('js-take-lap')
+    lapBtn.textContent = 'Lap'
+    lapBtn.addEventListener('click', this.hadleLapTimer.bind(this));
 
-function createPreviewItem({ preview, fullview, alt }) {
+    div.append(p, startBtn, lapBtn, resetBtn)
 
-  const item = document.createElement('li')
-  item.classList.add('preview-list__item')
-  
-  const img = document.createElement('img')
-  img.setAttribute('src', preview)
-  img.setAttribute('data-fullview', fullview)
-  img.setAttribute('alt', alt)
+    const list = document.createElement('ul');
+    list.classList.add('laps')
+    list.classList.add('js-laps')
 
-  item.appendChild(img)
+    section.append(div, list)
+    this.watches.append(section)
 
-  previewList.appendChild(item)
+    this.watch = this.watches.querySelector('.stopwatch');
+    this.startBtn = this.watches.querySelector('.js-start');
+    this.lapBtn = this.watches.querySelector('.js-take-lap');
+    this.resetBtn = this.watches.querySelector('.js-reset');
+    this.listLaps = this.watches.querySelector('.js-laps');
+    this.timerContent = this.watches.querySelector('.js-time');
+  }
 
-  return item
+  startTimer() {
+    if (this.isActive) return;
+    this.isActive = true;
+    this.startTime = Date.now() - this.deltaTime;
+    this.id = setInterval(() => {
+      const currentTime = Date.now();
+      this.deltaTime = currentTime - this.startTime;
+      this.updateClockface(this.deltaTime);
+    }, 100);
+  }
+
+  pauseTimer() {
+    clearInterval(this.id);
+    this.isActive = false;
+  }
+
+  updateClockface(time) {
+    this.timerContent.textContent = this.getFormattedTime(time);
+  }
+
+  getFormattedTime(time) {
+    let date = new Date();
+    date.setTime(time);
+    let minutes = date.getMinutes();
+    minutes = (minutes < 10 ? '0' : '') + minutes;
+    let seconds = date.getSeconds();
+    seconds = (seconds < 10 ? '0' : '') + seconds;
+    const mseconds = date.getMilliseconds().toString().slice(0, 1);
+    return `${minutes}:${seconds}.${mseconds}`;
+  }
+
+  setActiveBtn(target) {
+    if (target.classList.contains('active')) return;
+    this.startBtn.classList.remove('active');
+    this.resetBtn.classList.remove('active');
+    target.classList.add('active');
+
+  }
+
+  handleStartTimer({
+    target
+  }) {
+    if (!this.isActive) {
+      this.setActiveBtn(target);
+      this.startTimer(target);
+      this.startBtn.textContent = 'Pause';
+    } else {
+      this.pauseTimer(target);
+      this.startBtn.textContent = 'Continue';
+    }
+  }
+
+  hadleResetTimer({
+    target
+  }) {
+    clearInterval(this.id);
+    this.isActive = false;
+    this.setActiveBtn(target);
+    this.deltaTime = 0;
+    this.updateClockface(this.deltaTime);
+    this.startBtn.textContent = 'Start';
+    this.listLaps.innerHTML = null;
+    this.startTime = null;
+  }
+
+  hadleLapTimer() {
+    if (!this.isActive) return;
+    const item = document.createElement('li');
+    item.textContent = this.timerContent.textContent;
+    this.listLaps.append(item);
+  }
 }
 
-function createPreviewItems(arr) {
-  const listItems = arr.map(elem => createPreviewItem(elem))
-  return listItems
-}
+const Timer1 = new Stopwatch({
+  watches: watches,
+});
 
-const previewItems = createPreviewItems(galleryItems)
+const Timer2 = new Stopwatch({
+  watches: watches,
+});
 
-previewList.addEventListener('click', handleCreateFullviewItem)
-
-function createFirstFullviewItem(obj = galleryItems[0]) {
-  const img = `<img src=${obj.fullview} alt=${obj.alt}>`
-  
-  fullview.insertAdjacentHTML('afterbegin', img);
-
-}
-
-const firstFullviewItem = createFirstFullviewItem()
-
-function handleCreateFullviewItem(evt) {
-  fullview.firstChild.remove()
-
-  const target = evt.target
-  const src = target.dataset.fullview
-  const alt = target.getAttribute('alt')
-
-  const img = `<img src=${src} alt=${alt}>`
-
-  fullview.insertAdjacentHTML('afterbegin', img);
-  window.removeEventListener('click', handleCreateFullviewItem);
-}
-
+const Timer3 = new Stopwatch({
+  watches: watches,
+});
