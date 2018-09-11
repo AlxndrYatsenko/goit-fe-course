@@ -1,0 +1,13 @@
+.img{
+  width: 200px;
+  height: auto;
+}
+
+.laptop{
+  display: inline-block;
+  width: 200px;
+}
+.laptop:not(:last-of-type){
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
