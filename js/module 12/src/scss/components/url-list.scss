@@ -6,10 +6,11 @@
 }
 
 .url-item {
-  display: block;
+  display: flex;
+justify-content: space-between;
   text-align: center;
   padding: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   min-width: 250px;
   max-width: 334px;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),

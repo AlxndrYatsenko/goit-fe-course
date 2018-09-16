@@ -1,20 +1,14 @@
 .button {
-  position: relative;
-  display: inline-block;
+  position: relative; 
   border: none;
   border-radius: 3px;
-  // margin: 0 4px;
-  padding: 8px 24px;
+  padding: 12px 11px;
   vertical-align: top;
   outline: 0;
-  font-weight: 500;
-
   font-size: 13px;
   color: #222;
   text-transform: uppercase;
   text-align: center;
-  white-space: nowrap;
-
   background-color: #fff;
   overflow: hidden;
   z-index: 0;
@@ -26,4 +20,9 @@
 
 .button:hover {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.url-item__button{
+  height: 30px;
+  align-self: center;
 }

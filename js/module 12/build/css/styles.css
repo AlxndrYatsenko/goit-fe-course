@@ -395,7 +395,7 @@ body {
   max-width: 600px;
   padding: 8px;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   text-align: center;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -416,10 +416,11 @@ body {
 }
 
 .url-item {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   padding: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   min-width: 250px;
   max-width: 334px;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -439,18 +440,15 @@ body {
 
 .button {
   position: relative;
-  display: inline-block;
   border: none;
   border-radius: 3px;
-  padding: 8px 24px;
+  padding: 12px 11px;
   vertical-align: top;
   outline: 0;
-  font-weight: 500;
   font-size: 13px;
   color: #222;
   text-transform: uppercase;
   text-align: center;
-  white-space: nowrap;
   background-color: #fff;
   overflow: hidden;
   z-index: 0;
@@ -461,4 +459,9 @@ body {
 
 .button:hover {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.url-item__button {
+  height: 30px;
+  align-self: center;
 }
