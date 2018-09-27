@@ -1,4 +1,4 @@
-const BASE_URL = `http://api.linkpreview.net/?key=5bab6d746970f86da738753c41ba9d768c2bc1bc72d2b`
+const BASE_URL = `https://api.linkpreview.net/?key=5bab6d746970f86da738753c41ba9d768c2bc1bc72d2b`
 
  const cards = [{
       url: 'https://rozetka.com.ua/',
