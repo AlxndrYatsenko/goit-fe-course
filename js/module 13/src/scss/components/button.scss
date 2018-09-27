@@ -1,0 +1,28 @@
+.button {
+  position: relative; 
+  border: none;
+  border-radius: 3px;
+  padding: 12px 11px;
+  vertical-align: top;
+  outline: 0;
+  font-size: 13px;
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s, color 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.url-item__button{
+  height: 30px;
+  align-self: center;
+}
