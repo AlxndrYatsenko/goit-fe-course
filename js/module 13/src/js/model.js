@@ -23,13 +23,9 @@ export default class Model {
   }
 
   isHasUrl(url, arr) {
-    let isHas = arr.find(obj => obj.url === url);
-
-    if (isHas !== undefined) {
-      alert('Такая закладка уже есть!!!');
-      isHas = true;
-    }
-    return isHas;
+    const isHas = arr.some(obj => obj.url === url);
+    if (isHas) alert('Такая закладка уже есть!!!')
+    return isHas
   }
 
   deleteCard(event) {
@@ -41,8 +37,8 @@ export default class Model {
     this.addToLocalStorage(this.localCards)
   }
 
-  addToLocalStorage() {
-    const jsonObj = JSON.stringify(this.localCards);
+  addToLocalStorage(arr) {
+    const jsonObj = JSON.stringify(arr);
     localStorage.setItem(`cards`, jsonObj);
   }
 }

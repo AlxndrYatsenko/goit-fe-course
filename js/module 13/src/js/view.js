@@ -1,3 +1,5 @@
+import template from '../html/template.hbs'
+
 export default class View {
   constructor() {
     this.refs = {};
@@ -9,8 +11,8 @@ export default class View {
   }
 
   init(cards) {
-    const markup = cards.reduce((string, card) => {
-      return string + this.createCardMarkup(card)}, '');
+    const markup = cards.reduce((acc, card) => {
+      return acc + this.createCardMarkup(card)}, '');
 
     this.refs.urlList.insertAdjacentHTML('afterbegin', markup);
   }
@@ -27,17 +29,7 @@ export default class View {
     this.refs.urlList.insertAdjacentHTML('afterbegin', markup)
   }
 
-
   createCardMarkup({ img, url }) {
-    return `
-    <form class="url-item">
-    <div class="wrapper">
-      <img class="url-item__img" src="${img}">
-      <p class="url-item__text">${url}</p>
-    </div>
-    <button class="button url-item__button">Удалить</button>
-  </form>
-    `;
+    return template({ img, url })
   }
-
 }

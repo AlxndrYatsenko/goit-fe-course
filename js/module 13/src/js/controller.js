@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { BASE_URL} from './services/database'
+import * as axiosRequest from './services/api';
 
 export default class Controller {
   constructor(model, view) {
@@ -17,7 +16,7 @@ export default class Controller {
   }
 
   init() {
-    this._model.addToLocalStorage()
+    this._model.addToLocalStorage(this.cards)
     this._view.init(this.cards);
   }
 
@@ -29,16 +28,18 @@ export default class Controller {
     if (!this._model.isValid(urlText)) return
     if (this._model.isHasUrl(urlText, this.cards)) return
 
-    axios
-      .get(`${BASE_URL}&q=${urlText}`).then(response => response.data)
-      .then(data => {
-        const obj = { url: urlText, img: data.image }
-        this.cards.unshift(obj)
-        this._model.addToLocalStorage()
-        this._view.addCard(obj)
-      })
-      .catch(err => console.log(err));
+    try {
+      axiosRequest(urlText, this.cards)
+    } catch (e) {
+      if (e.name == 'URIError') {
+        throw new ReadError("Ошибка в URI", e);
+      } else if (e.name == 'SyntaxError') {
+        throw new ReadError("Синтаксическая ошибка в данных", e);
+      } else {
+        throw e;
+      }
   }
+}
 
   handleDeleteCard(evt) {
     if (evt.target.tagName === 'BUTTON') {

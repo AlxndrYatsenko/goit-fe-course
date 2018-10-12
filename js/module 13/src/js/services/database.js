@@ -1,6 +1,6 @@
-const BASE_URL = `https://api.linkpreview.net/?key=5bab6d746970f86da738753c41ba9d768c2bc1bc72d2b`
+  export const BASE_URL = `https://api.linkpreview.net/?key=5bab6d746970f86da738753c41ba9d768c2bc1bc72d2b`
 
- const cards = [{
+export const cards = [{
       url: 'https://rozetka.com.ua/',
       img: 'https://i.rozetka.ua/favicons/apple-touch-icon-114x114.png',
     },
@@ -17,6 +17,3 @@ const BASE_URL = `https://api.linkpreview.net/?key=5bab6d746970f86da738753c41ba9
       img: 'https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png',
     },
   ];
-
-  export { cards };
-  export { BASE_URL };
