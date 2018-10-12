@@ -1,0 +1,16 @@
+.url-editor{
+  max-width: 600px;
+  padding: 8px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  text-align: center;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.url-editor__text {
+  width: 100%;
+  font-family: inherit;
+  padding: 8px;
+  font-size: 14px;
+  resize: none;
+}
